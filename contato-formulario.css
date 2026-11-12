@@ -1,0 +1,5 @@
+/* BLOCO CONTATE-NOS — legibilidade dos campos */
+#contato-site .u-input { color: #222; background-color: #fff; }
+#contato-site .u-input::placeholder { color: #666; opacity: 1; }
+#contato-site .u-input:focus-visible { outline: 3px solid #a8996c; outline-offset: 2px; }
+#contato-site button:focus-visible { outline: 3px solid white; outline-offset: 4px; }

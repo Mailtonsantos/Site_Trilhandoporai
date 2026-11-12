@@ -1,0 +1,47 @@
+.patagonia-expedition {
+  background: #d2e0e7;
+  padding-bottom: 64px;
+}
+.patagonia-banner {
+  min-height: 520px;
+  padding: 64px 20px 150px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(#0006, #0008), url("images/expedicao-patagonia.jpeg") center 40% / cover;
+}
+.patagonia-banner h1 { font-family: "Playfair Display", serif; font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; text-transform: uppercase; margin: 0 0 20px; }
+.patagonia-banner p { font-size: 1.25rem; }
+.patagonia-banner .patagonia-note { font-size: .875rem; opacity: .85; }
+.patagonia-days { position: relative; width: min(1140px, calc(100% - 40px)); margin: -120px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.patagonia-day { border: 1px solid #aca07b; padding: 20px 20px 30px; text-align: center; }
+.patagonia-photo { height: 178px; display: flex; align-items: center; justify-content: center; background: #e8f2fa; border: 1px dashed #8ba5b4; color: #4c6778; font-size: .95rem; }
+.patagonia-day h3 { margin: 16px 0 0; font-family: Lato, sans-serif; font-size: 1.25rem; font-weight: 700; text-transform: uppercase; }
+.patagonia-day .patagonia-date { font-family: "Playfair Display", serif; font-weight: 700; margin: 8px 0 14px; }
+.patagonia-day .patagonia-story { font-style: italic; line-height: 1.8; margin: 0; }
+@media (max-width: 991px) { .patagonia-days { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 575px) { .patagonia-days { grid-template-columns: 1fr; max-width: 360px; margin-top: -80px; } .patagonia-banner { min-height: 420px; padding-top: 48px; } .patagonia-photo { height: 220px; } }
+
+/* Banners supplied for the Patagonia expedition. */
+.patagonia-construction { background: #fff3d4; border-bottom: 2px solid #d9a241; color: #513b15; padding: 24px max(20px, calc((100% - 1140px) / 2)); text-align: center; }
+.patagonia-construction strong { display: block; font-size: 1.5rem; }
+.patagonia-construction p { margin: 10px auto 0; max-width: 800px; line-height: 1.6; }
+.patagonia-banner { min-height: 0; padding: 48px 20px; background: #132b3b; }
+.patagonia-media { width: min(100%, 1000px); margin: 32px auto 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; align-items: start; }
+.patagonia-media figure { min-width: 0; margin: 0; }
+.patagonia-media img, .patagonia-media video { display: block; width: 100%; height: auto; border-radius: 12px; background: #07131c; }
+.patagonia-media figcaption { font-size: .875rem; margin-top: 12px; color: #d5e4ee; }
+.patagonia-days { margin-top: 0; padding-top: 40px; }
+@media (max-width: 575px) {
+ .patagonia-banner { padding: 36px 20px; }
+ .patagonia-media { grid-template-columns: 1fr; max-width: 400px; }
+ .patagonia-days { margin-top: 0; }
+}
+/* Centralizar também as linhas com poucos quadros. */
+.patagonia-days { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
+.patagonia-day { box-sizing: border-box; flex: 0 0 calc(25% - 15px); min-width: 0; }
+@media (max-width: 991px) {
+ .patagonia-day { flex-basis: calc(50% - 10px); }
+}
+@media (max-width: 575px) {
+ .patagonia-day { flex-basis: 100%; }
+}
