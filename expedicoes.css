@@ -314,3 +314,8 @@
  .expeditions-preview .u-list-item:hover .u-image,
  .expeditions-preview .u-list-item:focus-within .u-image { transform: none; }
 }
+/* Cantos discretos nos cartões de expedições. */
+.expeditions-preview .u-list-item { --radius: 14px; border-radius: 14px; }
+.expeditions-preview .expedition-image-frame,
+.expeditions-preview .u-image { --radius: 10px; border-radius: 10px; }
+.expeditions-preview .expedition-card-link::after { border-radius: 14px; }

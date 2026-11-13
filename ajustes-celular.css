@@ -1,0 +1,71 @@
+/* Ajustes exclusivos para celular; desktop preservado. */
+@media (max-width: 575px) {
+ .home-viewport section h2.u-text { font-size: 1.65rem; line-height: 1.2; }
+ .home-viewport section p.u-text, .home-viewport section ul.u-text { font-size: .95rem; line-height: 1.6; }
+ /* Galeria Onde já acampamos: duas fotos em cada linha. */
+ #sec-6f9d .u-gallery-1 { height: auto; }
+ #sec-6f9d .u-gallery-inner-1 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; grid-auto-rows: auto; }
+ #sec-6f9d .u-gallery-item { aspect-ratio: 1; min-height: 0; }
+ #sec-6f9d .u-back-slide { height: 100%; }
+ #sec-6f9d .u-back-image { width: 100%; height: 100%; object-fit: cover; }
+ #sec-6f9d .u-image-1.u-layout-cell { min-height: 260px; }
+ /* As duas expedições lado a lado. */
+ .expeditions-preview .u-repeater-1 { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; min-height: 0; }
+ .expeditions-preview .u-list-1 { max-width: none; }
+ .expeditions-preview .u-list-item { border-radius: 22px; }
+ .expeditions-preview .u-container-layout { padding: 12px 10px 18px; }
+ .expeditions-preview .expedition-image-frame, .expeditions-preview .u-image { border-radius: 16px; }
+ .expeditions-preview .u-image { height: auto; aspect-ratio: 1; object-fit: cover; }
+ .expeditions-preview h4.u-text { font-size: 1rem; line-height: 1.3; margin-top: 12px; }
+ .expeditions-preview h6.u-text { font-size: .8rem; line-height: 1.4; margin-top: 8px; }
+ /* Atividades esportivas: manter as duas fotos na mesma linha. */
+ #sec-525c .u-layout-wrap-1 { margin: 24px 0; }
+ #sec-525c .u-layout-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; }
+ #sec-525c .u-layout-row > div, #sec-525c .u-layout-col { display: contents; }
+ #sec-525c .u-layout-cell { width: auto; min-width: 0; border-width: 0; }
+ #sec-525c .u-layout-cell-1 { order: 1; grid-column: 1 / -1; min-height: 0; }
+ #sec-525c .u-image-1 { order: 2; }
+ #sec-525c .u-image-2 { order: 3; }
+ #sec-525c .u-image-1, #sec-525c .u-image-2 { min-height: 0; aspect-ratio: 1; background-size: cover; }
+ #sec-525c .u-layout-cell-4 { order: 4; grid-column: 1 / -1; min-height: 0; }
+ #sec-525c .u-container-layout-1, #sec-525c .u-container-layout-4 { padding: 16px 0; }
+ .home-viewport .u-back-to-top { width: 44px !important; height: 44px !important; padding: 10px !important; right: 12px !important; bottom: 12px !important; }
+}
+@media (max-width: 575px) {
+ .expeditions-preview .u-list-item { --radius: 14px; border-radius: 14px; }
+ .expeditions-preview .expedition-image-frame,
+ .expeditions-preview .u-image { --radius: 10px; border-radius: 10px; }
+}
+/* Ações do primeiro bloco lado a lado no celular. */
+@media (max-width: 575px) {
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 { width: 100%; margin: 24px auto; }
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 .u-layout-row { display: flex; flex-direction: row; flex-wrap: nowrap; margin: 0; gap: 10px; }
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 .u-layout-cell { flex: 1 1 0; width: 0; min-width: 0; min-height: 0; }
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 .u-container-layout { padding: 0; }
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 .u-btn { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 44px; margin: 0; padding: 10px 6px; font-size: clamp(.65rem, 2.7vw, .8rem); line-height: 1.2; letter-spacing: .3px; white-space: nowrap; }
+}
+/* Categorias do início: ícones compactos e palavras inteiras. */
+@media (max-width: 575px) {
+ .home-viewport #sec-9cc6 .u-list-1 { margin: 20px 0; }
+ .home-viewport #sec-9cc6 .u-repeater-1 { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-columns: auto; gap: 20px 12px; min-height: 0; }
+ .home-viewport #sec-9cc6 .u-list-item .u-container-layout { padding: 12px 4px; }
+ .home-viewport #sec-9cc6 .u-list-item .u-icon { width: 42px; height: 42px; margin: 0 auto; }
+ .home-viewport #sec-9cc6 .u-list-item h4,
+ .home-viewport #sec-9cc6 .u-list-item h4 a { font-size: clamp(.7rem, 3.1vw, .875rem); line-height: 1.35; letter-spacing: 0; word-break: normal; overflow-wrap: normal; hyphens: none; }
+ .home-viewport #sec-9cc6 .u-list-item h4 { margin: 10px 0 0; }
+ .home-viewport #sec-9cc6 .u-list-item h4 a { padding: 0; margin: 0; }
+}
+/* Foto vertical: largura proporcional e enquadramento completo no celular. */
+@media (max-width: 575px) {
+ #sec-6f9d .u-image-1.u-layout-cell {
+  width: 100%;
+  flex: 0 0 auto;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 717 / 1080;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
+ #sec-6f9d .u-image-1.u-layout-cell > .u-container-layout { min-height: 0; height: 100%; padding: 0; }
+}
