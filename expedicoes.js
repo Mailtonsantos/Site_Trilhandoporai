@@ -1,7 +1,7 @@
 (() => {
   const cards = document.querySelectorAll('.expeditions-preview .u-list-item');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  if (!cards.length || reducedMotion.matches || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(max-width: 767px)').matches || !cards.length || reducedMotion.matches || !('IntersectionObserver' in window)) return;
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

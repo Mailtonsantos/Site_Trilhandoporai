@@ -1,0 +1,12 @@
+/* No celular, o conteúdo aparece sem esperar as animações de entrada. */
+@media (max-width: 767px) {
+ [data-animation-name], [data-animation-name].u-invisible,
+ .expeditions-preview .expedition-enter,
+ .expeditions-preview .expedition-enter.expedition-visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  animation: none !important;
+  animation-delay: 0s !important;
+  transform: none !important;
+ }
+}
