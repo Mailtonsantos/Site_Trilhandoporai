@@ -1,6 +1,6 @@
 /* No celular, o conteúdo aparece sem esperar as animações de entrada. */
 @media (max-width: 767px) {
- [data-animation-name], [data-animation-name].u-invisible,
+ .mobile-instant, [data-animation-name], [data-animation-name].u-invisible,
  .expeditions-preview .expedition-enter,
  .expeditions-preview .expedition-enter.expedition-visible {
   opacity: 1 !important;

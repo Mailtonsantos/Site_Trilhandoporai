@@ -69,3 +69,21 @@
  }
  #sec-6f9d .u-image-1.u-layout-cell > .u-container-layout { min-height: 0; height: 100%; padding: 0; }
 }
+/* Início no celular: aproximar o conteúdo do menu, sem grandes vazios. */
+@media (max-width: 575px) {
+ .home-viewport #sec-9cc6 > .u-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 0;
+  padding: 28px 0 24px;
+ }
+ .home-viewport #sec-9cc6 > .u-sheet::before,
+ .home-viewport #sec-9cc6 > .u-sheet::after { display: none; }
+ .home-viewport #sec-9cc6 .u-text-1 { width: 100%; margin: 0; font-size: clamp(1.75rem, 8.8vw, 2.25rem); line-height: 1.2; }
+ .home-viewport #sec-9cc6 .u-text-2 { width: 100%; margin: 30px 0 0; font-size: .875rem; line-height: 1.6; }
+ .home-viewport #sec-9cc6 .u-layout-wrap-1 { margin: 24px 0 0; flex-shrink: 0; }
+ .home-viewport #sec-9cc6 .u-list-1 { margin: 24px 0 0; flex-shrink: 0; }
+ .home-viewport #sec-9cc6 .site-social { margin: 24px 0 0; flex-shrink: 0; }
+}
