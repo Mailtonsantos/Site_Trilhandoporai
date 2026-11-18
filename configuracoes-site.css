@@ -1,0 +1,4 @@
+.site-view-count { background: #193d31; color: #edf1e5; text-align: center; font: .85rem/1.5 Lato, Arial, sans-serif; padding: 14px 20px; }
+.site-view-count[hidden] { display: none; }
+
+.expeditions-preview .expedition-date { font: .85rem/1.4 Lato,Arial,sans-serif; color: #526052; margin: 12px 0 0; }
