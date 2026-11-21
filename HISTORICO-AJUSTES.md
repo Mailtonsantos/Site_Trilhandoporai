@@ -169,3 +169,10 @@ Alterações posteriores pelo painel devem ser consultadas no D1; elas não apar
 - Proprietário autorizou publicar a consolidação no GitHub e no Cloudflare pelo fluxo existente da branch main.
 - Preparados os seis documentos compartilhados; ajustes de espaços finais apenas em README.md e CREDITOS-PENDENTES.md. Nenhum código funcional ou dado do D1 alterado.
 - Este registro antecede o envio: confirmação do commit remoto e do deploy deve ser feita após o push, sem tratar autorização como publicação concluída.
+
+## 20/11/2026 — Publicação da documentação confirmada (b1ecbd3)
+
+- Push realizado pelo proprietário; main no GitHub confirmada em b1ecbd3d414d6d2804609983203727ceccb7c96f. Os seis documentos consolidados foram enviados.
+- Verificação Cloudflare Pages do commit: completed/success. CONTINUIDADE.md no domínio comparado e idêntico ao conteúdo enviado.
+- Página inicial e /links responderam HTTP 200; /links mantém links-painel.js. /painel redirecionou para login do Cloudflare Access. Nenhuma sessão privada ou configuração D1 foi alterada.
+- Confirmação registrada após a publicação em CONTINUIDADE.md e HISTORICO-AJUSTES.md; em seguida, o proprietário solicitou incluir esses registros no Git. O resultado de cada envio pode ser conferido no histórico remoto e nas verificações do Cloudflare Pages, sem exigir um novo commit apenas para registrar o próprio envio.

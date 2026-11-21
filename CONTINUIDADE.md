@@ -6,11 +6,11 @@ Atualizado em 20/11/2026. Documentação única de site, /links e painel, consol
 
 - Site publicado: https://trilhandoporai.com.
 - GitHub: https://github.com/Mailtonsantos/Site_Trilhandoporai.git, branch `main`.
-- Versão atual de código: `ea5b4b0ba91265aa531958ef8b4f3fdb5e4762e7` (`ea5b4b0`) — controles de Links e fundo móvel no painel. Em 20/11/2026, HEAD, origin/main e a branch main consultada diretamente no GitHub coincidem nesse commit.
-- Última publicação verificada: `ea5b4b0`, conforme conferência de produção registrada no chat de Links em 20/11/2026. A consolidação atual conferiu o Git; não realizou nova inspeção do site ou do painel em produção.
+- Última versão com alterações funcionais: `ea5b4b0ba91265aa531958ef8b4f3fdb5e4762e7` (`ea5b4b0`) — controles de Links e fundo móvel no painel. Na conferência anterior à consolidação documental em 20/11/2026, HEAD, origin/main e main no GitHub coincidiam nesse commit.
+- Última publicação verificada: `b1ecbd3` (documentação), com Cloudflare Pages concluído com sucesso em 20/11/2026. A publicação funcional anterior, `ea5b4b0`, foi conferida no chat de Links.
 - `/links`: https://trilhandoporai.com/links, publicada inicialmente em `dc8819d`. `ab956bf` é a versão histórica que introduziu painel e contador, não a versão atual.
 - Em 18/11, o proprietário confirmou acesso normal ao painel e funcionamento do contador público. O FormSubmit também foi ativado e teve entrega de e-mail confirmada anteriormente.
-- Documentação iniciada localmente em 19/11 e consolidada em 20/11. Publicação desta consolidação autorizada pelo proprietário em 20/11/2026; o resultado do envio e do deploy deve ser conferido no GitHub e Cloudflare. A versão de código funcional continua sendo ea5b4b0; o commit documental posterior não altera o funcionamento do site.
+- Documentação iniciada localmente em 19/11 e consolidada em 20/11. Consolidação publicada no commit b1ecbd3d414d6d2804609983203727ceccb7c96f (b1ecbd3), confirmado na branch main do GitHub em 20/11/2026. A verificação Cloudflare Pages desse commit terminou com sucesso e o domínio serviu CONTINUIDADE.md idêntico ao arquivo enviado. A versão de código funcional continua sendo ea5b4b0; b1ecbd3 altera apenas documentação. O registro da confirmação integra a documentação compartilhada; commits apenas documentais posteriores não representam nova versão funcional.
 
 ## Links e painel — estado publicado
 
