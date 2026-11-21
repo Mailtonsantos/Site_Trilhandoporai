@@ -3,6 +3,8 @@
  if(location.protocol==='file:'||location.pathname.startsWith('/painel'))return;
  const timeout=AbortSignal.timeout(5000);
  fetch('/api/config',{signal:timeout,cache:'no-store'}).then(r=>{if(!r.ok)throw new Error();return r.json()}).then(({config:c})=>{
+  // BLOCO LINKS — somente a configuração publicada da página dedicada.
+  if(document.querySelector('.links-page')&&typeof window.renderLinksPage==='function')window.renderLinksPage(c.linksPage);
   let path;try{path=decodeURIComponent(location.pathname)}catch{path=location.pathname}
   if(path.endsWith('/'))path+='index.html';else if(!path.split('/').pop().includes('.'))path+='.html';
   if(c.pageTitles?.[path])document.title=c.pageTitles[path];

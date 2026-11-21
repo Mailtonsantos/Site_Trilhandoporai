@@ -1,10 +1,14 @@
+import {linksDefaults,validateLinks} from './links.js';
 import { defaults } from './defaults.js';
 export const json = (data, status=200) => new Response(JSON.stringify(data), {status, headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'}});
 export function database(env) { if (!env.SITE_DB) throw new Error('Banco de dados ainda não conectado.'); return env.SITE_DB; }
 export async function state(db,id) {
  const row=await db.prepare('SELECT value,revision,updated_at FROM site_state WHERE id=?').bind(id).first();
  if (!row) throw new Error('Estrutura do banco ainda não instalada.');
- return {config:JSON.parse(row.value),revision:row.revision,updatedAt:row.updated_at};
+ const config=JSON.parse(row.value);
+ // Compatibilidade: acrescentar somente a seção ausente; não regravar nem substituir dados do D1.
+ if(config.linksPage===undefined)config.linksPage=structuredClone(linksDefaults);
+ return {config,revision:row.revision,updatedAt:row.updated_at};
 }
 export function validate(input) {
  if (!input || typeof input!=='object') throw new Error('Configuração inválida.');
@@ -45,6 +49,7 @@ export function validate(input) {
   if(typeof startDate!=='string'||(startDate&&(!/^\d{4}-\d{2}-\d{2}$/.test(startDate)||new Date(startDate+'T00:00:00Z').toISOString().slice(0,10)!==startDate)))throw new Error('Confira a data da expedição.');
   return {title:e.title.trim(),subtitle:e.subtitle.trim(),image:url(e.image,true),link:e.link?url(e.link):'',visible:e.visible===true,startDate};
  });
+ output.linksPage=validateLinks(input.linksPage===undefined?structuredClone(linksDefaults):input.linksPage);
  return output;
 }
 export async function stats(db){

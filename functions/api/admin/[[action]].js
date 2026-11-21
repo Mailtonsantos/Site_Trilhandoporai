@@ -13,7 +13,9 @@ export async function onRequest({request,env,params}){
   const body=JSON.parse(raw);
   if(!Number.isInteger(body.revision)||body.revision<0)return json({error:'Recarregue as configurações.'},400);
   if(action==='settings'){
-   const config=validate(body.config);
+   // Preservar Links quando uma aba antiga do painel envia os campos anteriores.
+   const current=await state(db,'draft');
+   const config=validate({...body.config,linksPage:body.config?.linksPage===undefined?current.config.linksPage:body.config.linksPage});
    const result=await db.prepare("UPDATE site_state SET value=?,revision=revision+1,updated_at=CURRENT_TIMESTAMP WHERE id='draft' AND revision=?").bind(JSON.stringify(config),body.revision).run();
    if(!result.meta.changes)return json({error:'O rascunho mudou em outra janela. Recarregue antes de salvar.'},409);
    return json({draft:await state(db,'draft')});

@@ -20,8 +20,8 @@ body {
 h1 { font-family: Beloved, Georgia, serif; font-weight: 400; font-size: clamp(2.8rem, 9vw, 4.5rem); line-height: 1.15; margin: 0 0 1rem; }
 .links-description { margin: 0; color: #f0f0e9; font-size: 1.0625rem; }
 /* BLOCO QUADROS DE LINKS — espaçamento compacto, mantendo o tamanho dos textos. */
-.links-list { display: grid; width: min(100%, 21.25rem); gap: .75rem; margin: 2rem auto 0; }
-.links-card { display: flex; align-items: center; gap: 1rem; padding: .5rem 1.25rem; border: 1px solid #aaa58e; border-radius: 14px; color: #fff; background: #202b25; text-align: left; text-decoration: none; }
+.links-list { display: grid; width: min(100%, var(--links-width, 21.25rem)); gap: .75rem; margin: 2rem auto 0; }
+.links-card { min-height: var(--links-height, 0px); display: flex; align-items: center; gap: 1rem; padding: .5rem 1.25rem; border: 1px solid #aaa58e; border-radius: 14px; color: #fff; background: #202b25; text-align: left; text-decoration: none; }
 .links-card-primary { background: #74663f; border-color: #b9a773; }
 .links-card svg { width: 2rem; height: 2rem; flex-shrink: 0; }
 .links-card strong { display: block; font-size: 1.125rem; line-height: 1.4; }
@@ -35,3 +35,12 @@ h1 { font-family: Beloved, Georgia, serif; font-weight: 400; font-size: clamp(2.
   .links-eyebrow { letter-spacing: .04em; }
   .links-card { padding: .375rem .75rem; gap: .75rem; }
 }
+
+/* BLOCO FUNDO NO CELULAR — parâmetros publicados pelo painel. */
+@media (max-width: 760px) {
+  body {
+    background-image: linear-gradient(180deg, rgba(15,22,18,var(--links-mobile-darkness,.72)), rgba(15,22,18,var(--links-mobile-darkness-bottom,.88))), var(--links-mobile-background,url('images/TP-01.jpg'));
+    background-position: center, var(--links-mobile-position,50%) center;
+  }
+}
+.links-card > span { min-width: 0; overflow-wrap: anywhere; }
